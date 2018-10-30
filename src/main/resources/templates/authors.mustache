@@ -1,0 +1,29 @@
+<html>
+
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="author_id" placeholder="Input Author_ID" />
+        <input type="text" name="name" placeholder="Input name" />
+        <input type="text" name="gender" placeholder="Input gender" />
+        <input type="DATE" name="born" placeholder="Input born" />
+        <button type="submit">Insert</button>
+    </form>
+</div>
+<div>Список Авторів</div>
+<form method="post" action="filtera">
+    <label>
+        <input type="text" name="filtera">
+    </label>
+    <button type="submit">Search</button>
+</form>
+{{#authors}}
+    <div>
+        <b>{{author_id}}</b>
+        <span>{{name}}</span>
+        <span>{{gender}}</span>
+        <span>{{born}}</span>
+    </div>
+{{/authors}}
+</body>
+</html>

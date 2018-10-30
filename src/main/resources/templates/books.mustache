@@ -1,0 +1,29 @@
+<html>
+
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="book_id" placeholder="Input Book ID" />
+        <input type="text" name="name" placeholder="Input name" />
+        <input type="DATE" name="published" placeholder="Input published" />
+        <input type="text" name="genre" placeholder="Input genre" />
+        <input type="text" name="rating" placeholder="Input rating" />
+        <button type="submit">Insert</button>
+    </form>
+</div>
+<div>Список книг</div>
+<form method="post" action="filter">
+    <input type="text" name="filter">
+    <button type="submit">Search</button>
+</form>
+{{#books}}
+    <div>
+        <b>{{book_id}}</b>
+        <span>{{name}}</span>
+        <span>{{published}}</span>
+        <span>{{genre}}</span>
+        <span>{{rating}}</span>
+    </div>
+{{/books}}
+</body>
+</html>

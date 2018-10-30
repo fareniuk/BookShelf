@@ -1,0 +1,22 @@
+<html>
+
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="ab_id" placeholder="Input AB_ID" />
+        <input type="text" name="authorid" placeholder="Input AuthorID" />
+        <input type="text" name="bookid" placeholder="Input BookID" />
+        <button type="submit">Insert</button>
+    </form>
+</div>
+<div>Список книг</div>
+
+{{#authorbooks}}
+    <div>
+        <b>{{ab_id}}</b>
+        <span>{{authorid}}</span>
+        <span>{{bookid}}</span>
+    </div>
+{{/authorbooks}}
+</body>
+</html>
